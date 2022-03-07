@@ -4,10 +4,12 @@ import homeController from "../controllers/homeController";
 let router = express.Router();
 
 let initWebRoutes = (app) => {
-    router.get('/', homeController.getHamePage);
+    router.get('/', homeController.getHomePage);
     router.get('/hoidanit', (req, res) => {
         return res.send("Hello world with hoidanit")
     });
+    router.get('/crud', homeController.getCRUD);
+    router.post('/post-crud', homeController.postCRUD);
     return app.use("/", router);
 }
 
