@@ -43,8 +43,9 @@
                      <td><%= dataTable[i].address %></td>
                      <td><%= dataTable[i].gender %></td>
                      <td>
+                        
                        <a type="button" href="/edit-crud?id=<%= dataTable[i].id %>" class="btn btn-primary">Edit</a>
-                       <a type="button" href="" class="btn btn-danger">Delete</a>
+                       <a type="button" href="/delete-crud?id=<%= dataTable[i].id %>" class="btn btn-danger">Delete</a>
                      </td>
                    </tr>
                 <% } %>
